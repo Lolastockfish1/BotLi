@@ -1,4 +1,4 @@
-token: "XXXXXXXXXXXXXXXXXXXXXXXX"         # Lichess OAuth2 Token.
+token: "lip_3pYpIunVYloIWpJGnDUW"         # Lichess OAuth2 Token.
 
 engine:                                   # Engine settings.
   dir: "./engines"                        # Directory containing the engine.
@@ -12,8 +12,8 @@ engine:                                   # Engine settings.
     max_pieces: 6                         # Count of max pieces in the local syzygy endgame tablebases.
     instant_play: true                    # Whether the bot should play directly from syzygy without engine if possible.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
-    Move Overhead: 100                    # Increase if your bot flags games too often.
-    Threads: 4                            # Max CPU threads the engine can use.
+    Move Overhead: 1000                    # Increase if your bot flags games too often.
+    Threads: 6                            # Max CPU threads the engine can use.
     Hash: 256                             # Max memory (in megabytes) the engine can allocate.
   variants:
     enabled: false                        # Activate seperate engine for other chess variants than standard and chess960.
