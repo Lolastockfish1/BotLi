@@ -13,7 +13,7 @@ engine:                                   # Engine settings.
     instant_play: true                    # Whether the bot should play directly from syzygy without engine if possible.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
     Move Overhead: 1000                   # Increase if your bot flags games too often.
-    Threads: 6                            # Max CPU threads the engine can use.
+    Threads: 8                            # Max CPU threads the engine can use.
     Hash: 256                             # Max memory (in megabytes) the engine can allocate.
     Ponder: true
     Use NNUE: true
@@ -24,8 +24,8 @@ engine:                                   # Engine settings.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
     uci_options:                          # Arbitrary UCI options passed to the engine. (Commenting allowed)
-      Move Overhead: 100                  # Increase if your bot flags games too often.
-      Threads: 4                          # Max CPU threads the engine can use.
+      Move Overhead: 1000                 # Increase if your bot flags games too often.
+      Threads: 8                          # Max CPU threads the engine can use.
       Hash: 256                           # Max memory (in megabytes) the engine can allocate.
   opening_books:
     enabled: true                         # Activate opening books.
@@ -122,4 +122,4 @@ matchmaking:
   delay: 10                               # Time in seconds the bot must be idle before a new challenge is started.
 
 books:                                    # Names of the opening books (to be used above in the opening_books section) and paths to the opening books.
-  DefaultBook: "lichessbokj.bin"
+  DefaultBook: "NEverloseallwon.bin"
