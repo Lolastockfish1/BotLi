@@ -18,7 +18,7 @@ engine:                                   # Engine settings.
     Ponder: true
     Use NNUE: true
   variants:
-    enabled: false                        # Activate seperate engine for other chess variants than standard and chess960.
+    enabled: true                         # Activate seperate engine for other chess variants than standard and chess960.
     dir: "./engines"                      # Directory containing the engine.
     name: "fairy-stockfish"               # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
@@ -43,8 +43,8 @@ engine:                                   # Engine settings.
 #   max_depth: 16                         # Half move max depth. (Comment this line for max depth)
   online_moves:
     opening_explorer:
-      enabled: false                      # Activate online moves from Lichess opening explorer. The move that has performed best for this bot is played.
-      use_for_variants: false             # Whether the Lichess opening explorer should be used for other variants than standard and chess960.
+      enabled: true                       # Activate online moves from Lichess opening explorer. The move that has performed best for this bot is played.
+      use_for_variants: true              # Whether the Lichess opening explorer should be used for other variants than standard and chess960.
       min_time: 20                        # Time the bot must have at least to use the online move.
       timeout: 5                          # Time the server has to respond.
       min_games: 5                        # Minimum number of games in which the position must have occurred.
