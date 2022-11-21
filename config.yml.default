@@ -17,12 +17,11 @@ engine:                                   # Engine settings.
       - "/path/to/gaviota"
     max_pieces: 5                         # Count of max pieces in the local gaviota endgame tablebases.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
-    Move Overhead: 1100                   # Increase if your bot flags games too often.
+    Move Overhead: 1000                   # Increase if your bot flags games too often.
     Threads: 8                            # Max CPU threads the engine can use.
     Hash: 256                             # Max memory (in megabytes) the engine can allocate.
     Ponder: true
     Use NNUE: true
-    UCI_AnalyseMode: true
   variants:
     enabled: false                        # Activate seperate engine for other chess variants than standard and chess960.
     dir: "./engines"                      # Directory containing the engine.
@@ -48,7 +47,7 @@ engine:                                   # Engine settings.
 #       - "Chess960Book"
 #     Use the same pattern for 'antichess', 'atomic', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
     selection: "best_move"                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-    max_depth: 50                         # Half move max depth. (Comment this line for max depth)
+    max_depth: 63                         # Half move max depth. (Comment this line for max depth)
   online_moves:
     opening_explorer:
       enabled: false                      # Activate online moves from Lichess opening explorer. The move that has performed best for this bot is played.
