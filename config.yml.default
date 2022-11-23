@@ -47,7 +47,7 @@ engine:                                   # Engine settings.
 #       - "Chess960Book"
 #     Use the same pattern for 'antichess', 'atomic', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
     selection: "best_move"                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-    max_depth: 63                         # Half move max depth. (Comment this line for max depth)
+    max_depth: 0                          # Half move max depth. (Comment this line for max depth)
   online_moves:
     opening_explorer:
       enabled: false                      # Activate online moves from Lichess opening explorer. The move that has performed best for this bot is played.
