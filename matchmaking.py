@@ -57,23 +57,21 @@ class Matchmaking:
         print(
             f'Challenging {opponent_username} ({self.opponent[self.perf_type]:+.1f}) as {color.value} to {self.perf_type.value} ...')
 
-        challenge_request = Challenge_Request(
-            opponent_username, self.initial_time, self.increment, self.is_rated, color, self._perf_type_to_variant(
-                self.perf_type),
-            self.timeout)
+        challenge_request = Challenge_Request(opponent_username, self.initial_time, self.increment,
+                                              self.is_rated, color, self._perf_type_to_variant(self.perf_type), self.timeout)
 
-        last_reponse: Challenge_Response | None = None
+        last_response: Challenge_Response | None = None
         for response in self.challenger.create(challenge_request):
-            last_reponse = response
+            last_response = response
             if response.challenge_id:
                 pending_challenge.set_challenge_id(response.challenge_id)
 
-        assert last_reponse
-        if not last_reponse.success and not last_reponse.has_reached_rate_limit:
+        assert last_response
+        if not last_response.success and not last_response.has_reached_rate_limit:
             self.need_next_opponent = True
             self.opponents.add_timeout(self.perf_type, opponent_username, False, self.estimated_game_duration)
 
-        pending_challenge.set_final_state(last_reponse.success, last_reponse.has_reached_rate_limit)
+        pending_challenge.set_final_state(last_response.success, last_response.has_reached_rate_limit)
 
     def on_game_started(self) -> None:
         self.game_start_time = datetime.now()
