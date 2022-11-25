@@ -59,7 +59,7 @@ engine:                                   # Engine settings.
       selection: "performance"            # Move selection is "performance" or "win_rate".
 #     max_depth: 30                       # Half move max depth. (Comment this line for max depth)
     chessdb:
-      enabled: true                       # Activate online moves from https://chessdb.cn/queryc_en/
+      enabled: false                      # Activate online moves from https://chessdb.cn/queryc_en/
       min_eval_depth: 10                  # Minimum evaluation depth. Only for selection: "best".
       min_time: 20                        # Time the bot must have at least to use the online move.
       timeout: 5                          # Time the server has to respond.
@@ -138,4 +138,4 @@ matchmaking:
   delay: 10                               # Time in seconds the bot must be idle before a new challenge is started.
 
 books:                                    # Names of the opening books (to be used above in the opening_books section) and paths to the opening books.
-  DefaultBook: "NEverloseallwon.bin"
+  DefaultBook: "Agianbooks.bin"
